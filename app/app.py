@@ -10,7 +10,7 @@ db = mysql.connector.connect(
     host = 'localhost',
     user = 'root',
     password = '',
-    database = 'agenda'
+    database = 'agenda2023'
 )
 cursor = db.cursor()
 
@@ -221,7 +221,7 @@ def editar_cancion(id):
         imagenCan = request.files['imgCan']
         imagenblobCan = imagenCan.read()
         
-        cursor = db.cursor()
+        
         #sentencia para actualizar los datos
         #son las variables de la base de datos
         sql = "UPDATE canciones SET titulo = %s, artista = %s, genero = %s, precio = %s, duracion = %s, lanzamiento = %s, img = %s WHERE id_can = %s"

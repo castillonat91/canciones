@@ -27,7 +27,7 @@ a{
 }
 .container{
 
-    background-color: rgb(3, 80, 94);
+    background-color: rgb(185, 49, 106);
     color: #fff;
     margin: 50px 30px;
     padding: 10px;
@@ -68,7 +68,7 @@ a{
     
 }
 .container_existe{
-    background-color: #004758;
+    background-color:  rgb(185, 49, 106);
     padding: 50px;
     width: 80%;
     margin: auto;

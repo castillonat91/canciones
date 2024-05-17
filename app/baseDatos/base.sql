@@ -1,5 +1,5 @@
-CREATE DATABASE agenda;
-use agenda;
+CREATE DATABASE agenda2023;
+use agenda2023;
 CREATE TABLE personas(
   id_persona int auto_increment primary key,
   nombre_persona varchar(60),
