@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#registro{
+
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-image: url(https://w.forfun.com/fetch/a4/a4a7d316cd4a79f51849f42768c50b6d.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#editar{
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.registro{
+    color: #fff;
+}
+.titulo{
+    text-align: center;
+    width: 50%;
+    margin: 100px auto;
+    padding: 10px;
+    font-size: 25px;
+}
+form{
+    box-shadow: 2px 2px 4px 4px rgba(249, 250, 252, 0.986);
+    width: 40%;
+    margin: 0 auto 40px auto;
+    padding: 50px;
+}
+.form{
+    margin: 40px auto;
+}
+label{
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+}
+input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+select{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+select option{
+    font-size: 15px;
+    height: 5px;
+}
+.content_button{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width: 40%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(22, 143, 212);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    height: 40%;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(110, 250, 250);
+}

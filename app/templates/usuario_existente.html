@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existe</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='../static/index.css')}}">
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div class="container_existe">
+        <h2>Usuario existente</h2>
+        <p>Lo sentimos el correo que ingreaste ya se encuentra registrado, vuelvelo a intentar</p>   
+        <button><a href="{{ url_for('registrar_usuario') }}">Registrar</a></button> 
+    </div>
+</body>
+</html>

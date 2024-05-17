@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    background-color: #01313f;
+    color: #fff;
+    height: 60px;
+}
+.nav_list{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav_list li{
+    font-size: 20px;
+    margin: 20px;
+}
+.nav_list li a:hover{
+    border-bottom: 2px solid rgb(3, 181, 212);
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.container{
+
+    background-color: rgb(3, 80, 94);
+    color: #fff;
+    margin: 50px 30px;
+    padding: 10px;
+    width: 96%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container h1{
+    margin: 80px auto 20px auto;
+    text-align: center;
+}
+.container h2{
+    margin: 50px auto 40px auto;
+}
+.table{
+    border-collapse: collapse;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #000;
+    
+}
+
+.botones a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.container_existe{
+    background-color: #004758;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+}
+.container_existe h2{
+    font-size: 40px;
+    margin: 40px 0;
+}
+.container_existe p{
+    font-size: 25px;
+    margin: 30px 0;
+}
+.container_existe button{
+    width: 50%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container_existe button a{
+    text-decoration: none;
+    color: #000;
+}
+
