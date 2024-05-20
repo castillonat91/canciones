@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .nav{
-    background-color: #01313f;
+    background-color: #086d5f;
     color: #fff;
     height: 60px;
 }
@@ -18,7 +18,7 @@
     margin: 20px;
 }
 .nav_list li a:hover{
-    border-bottom: 2px solid rgb(3, 181, 212);
+    border-bottom: 2px solid rgb(31, 129, 146);
 }
 a{
     color: #fff;
@@ -27,7 +27,7 @@ a{
 }
 .container{
 
-    background-color: rgb(185, 49, 106);
+    background-color: rgb(16, 150, 121);
     color: #fff;
     margin: 50px 30px;
     padding: 10px;

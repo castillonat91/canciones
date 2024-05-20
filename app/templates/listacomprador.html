@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='../static/canciones.css')}}">
+    <link rel="stylesheet" href="../static/canciones.css"> 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ea06c7c0f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_canciones">
+                <ul class="canciones_nav">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href= "{{ url_for('registrar_cancion')}}" >Agregar Canción</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Bienvenido a la lista de compras</h1>
+            <table class="table">
+                <tr>
+                    <th>Portada</th>
+                    <th>Titulo</th>
+                    <th>Artista</th>
+                    <th>Género</th>
+                    <th>Precio</th>
+                    <th>Duración</th>
+                    <th>Lanzamiento</th>
+                    <th>Acciones</th>
+                </tr>
+                <tbody>
+                    {% for cancion in canciones %}
+                    <tr>
+                        <td><img src="data:image/jpeg;base64,{{ cancion.imagenblob }}" width="100" alt="Imagen de la canción">
+                        </td>
+                        <td>{{ cancion.titulo }}</td>
+                        <td>{{ cancion.artista }}</td>
+                        <td>{{ cancion.genero }}</td>
+                        <td>{{ cancion.precio }}</td>
+                        <td>{{ cancion.duracion }}</td>
+                        <td>{{ cancion.lanzamiento }}</td>
+                        <td class="botones">
+                            <a href="">Añadir <i class="fa-solid fa-cart-shopping"></i></a><br>
+                            <a href="">Eliminar <i class="fa-solid fa-cart-shopping"></i></a><br>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+    
+</body>
+
+</html>

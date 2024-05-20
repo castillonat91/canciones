@@ -9,7 +9,7 @@ a{
     font-size: 20px;
 }
 .nav_canciones{
-    background-color: #01313f;
+    background-color: #0b6d74;
     color: #fff;
     height: 60px;
 }
@@ -89,7 +89,7 @@ input[type="file"] {
 .container{
     padding: 50px;
     margin: 50px ;
-    background-color: rgb(3, 80, 94);
+    background-color: rgb(10, 107, 131);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
     color: #fff;
 }
