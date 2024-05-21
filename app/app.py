@@ -1,4 +1,4 @@
-from flask import Flask, request,render_template, redirect, url_for,flash,session
+from flask import Flask, request,render_template, redirect, url_for,flash,jsonify,session
 from werkzeug.security import generate_password_hash,check_password_hash
 import mysql.connector
 import base64
@@ -279,6 +279,30 @@ def lista_comprador():
     else:
         print("no se encuentra")
         return render_template('listacomprador.html')
+    
+@app.route('/agregar-al-carro', methods = ['GET', 'POST'])
+def agregar_al_carrito():
+
+    idcan =request.form['idcan']
+    titulocan= request.form['titulocan']
+    preciocan = request.form['preciocan']
+
+    if 'cart' not in session:
+        session['cart'] = []
+
+    session['cart'].append({'id':idcan,'titulo':titulocan,'preciocan':float (preciocan)})
+    session.modified = True
+
+    print("contenido del carro",session['cart'])
+
+    return jsonify({'message': 'cancion agregada al carro'})
+
+@app.route('/carrito', methods = ['GET', 'POST'])
+def ver_carrito():
+    carro= session.get('cart',[])
+    total = sum(item['preciocan'] for item in carro)
+
+    return render_template('carrito.html',carro=carro,total=total)
                     
 if __name__ == '__main__':
     app.add_url_rule('/', view_func=lista)

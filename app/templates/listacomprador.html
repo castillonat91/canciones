@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canciones</title>
-    <link rel="stylesheet" href="{{url_for ('static', filename='../static/canciones.css')}}">
-    <link rel="stylesheet" href="../static/canciones.css"> 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='canciones.css') }}">
     <script src="https://kit.fontawesome.com/ea06c7c0f7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ea06c7c0f7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +16,8 @@
         <nav>
             <div class="nav_canciones">
                 <ul class="canciones_nav">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href= "{{ url_for('registrar_cancion')}}" >Agregar Canción</a></li>
+                    <li><a href="{{ url_for('ver_carrito') }}">Carrito</a></li>
+                    <li><a href="{{ url_for('logout') }}">Cerrar sesion</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,8 +39,7 @@
                 <tbody>
                     {% for cancion in canciones %}
                     <tr>
-                        <td><img src="data:image/jpeg;base64,{{ cancion.imagenblob }}" width="100" alt="Imagen de la canción">
-                        </td>
+                        <td><img src="data:image/jpeg;base64,{{ cancion.imagenblob }}" width="100" alt="Imagen de la canción"></td>
                         <td>{{ cancion.titulo }}</td>
                         <td>{{ cancion.artista }}</td>
                         <td>{{ cancion.genero }}</td>
@@ -48,17 +47,19 @@
                         <td>{{ cancion.duracion }}</td>
                         <td>{{ cancion.lanzamiento }}</td>
                         <td class="botones">
-                            <a href="">Añadir <i class="fa-solid fa-cart-shopping"></i></a><br>
-                            <a href="">Eliminar <i class="fa-solid fa-cart-shopping"></i></a><br>
+                            <button class="add-to-cart"
+                                    data-id="{{ cancion.id_can }}"
+                                    data-titulo="{{ cancion.titulo }}"
+                                    data-precio="{{ cancion.precio }}">Agregar al <i class="fa-solid fa-cart-shopping"></i></button>
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
-
         </div>
     </main>
-    
+
+    <script src="{{ url_for('static', filename='JS/carrito.js') }}"></script>
 </body>
 
 </html>
