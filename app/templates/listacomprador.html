@@ -16,7 +16,7 @@
         <nav>
             <div class="nav_canciones">
                 <ul class="canciones_nav">
-                    <li><a href="{{ url_for('ver_carrito') }}">Carrito</a></li>
+                    <li><a href="{{ url_for('ver_carrito') }}"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li><a href="{{ url_for('logout') }}">Cerrar sesion</a></li>
                 </ul>
             </div>
@@ -50,7 +50,7 @@
                             <button class="add-to-cart"
                                     data-id="{{ cancion.id_can }}"
                                     data-titulo="{{ cancion.titulo }}"
-                                    data-precio="{{ cancion.precio }}">Agregar al <i class="fa-solid fa-cart-shopping"></i></button>
+                                    data-precio="{{ cancion.precio }}"><div class="position-agre"> Agregar al <i class="fa-solid fa-cart-shopping"></i></button></div>
                         </td>
                     </tr>
                     {% endfor %}

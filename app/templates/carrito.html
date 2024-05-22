@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canciones</title>
-    <link rel="stylesheet" href="{{url_for ('static', filename='../static/canciones.css')}}">
-    <link rel="stylesheet" href="../static/canciones.css">
+    <link rel="stylesheet" href="{{url_for ('static', filename='../static/carrito.css')}}">
+    <link rel="stylesheet" href="../static/carrito.css">
     <script src="{{url_for('static',filename='js/carrito.js')}}"></script>
 </head>
 
@@ -31,7 +31,9 @@
                 <p>Precio:${{item.preciocan}}</p>
             </div>
             {% endfor %}
+            <div class="position-total">
             <h3>Total: ${{ total }}</h3>
+            </div>
         </div>
     </main>
     
