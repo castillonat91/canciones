@@ -303,6 +303,20 @@ def ver_carrito():
     total = sum(item['preciocan'] for item in carro)
 
     return render_template('carrito.html',carro=carro,total=total)
+
+@app.route('/eliminar-del-carro', methods=['POST'])
+def eliminar_del_carro():
+    idcan = request.form.get('idcan')
+
+    # Obtener el carrito de la sesión
+    carro = session.get('cart', [])
+    carro = [item for item in carro if item['id'] != idcan]
+    
+    # Guardar el carrito actualizado en la sesión
+    session['cart'] = carro
+    session.modified = True
+
+    return jsonify({'message': 'Canción eliminada del carro.'})
                     
 if __name__ == '__main__':
     app.add_url_rule('/', view_func=lista)

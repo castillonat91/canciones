@@ -1,95 +1,115 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
 }
 
 header {
-    background-color: #2689a1;
-    color: #fff;
+    background-color: #218d88;
     padding: 10px 0;
+    color: white;
     text-align: center;
 }
 
-nav {
+nav .nav_canciones {
     display: flex;
     justify-content: center;
 }
 
-.nav_canciones ul {
+nav .canciones_nav {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.nav_canciones ul li {
-    display: inline;
-    margin: 0 10px;
+nav .canciones_nav li {
+    margin: 0 15px;
 }
 
-.nav_canciones ul li a {
-    color: #fff;
+nav .canciones_nav a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-.nav_canciones ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 80px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #126a92;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
 }
 
 h1 {
     text-align: center;
     color: #000000;
+    margin-top: 20px;
 }
 
 #container {
+    width: 90%;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
 }
 
 .cart-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: rgb(41, 182, 207);
     padding: 20px;
-    width: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
+.cart-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .cart-item h2 {
-    margin: 0;
-    font-size: 22px;
-    color: #333;
+    margin: 10px 0;
+    font-size: 1.2em;
 }
 
 .cart-item p {
     margin: 5px 0;
-    color: #000000;
+    font-size: 1em;
 }
 
-h3 {
-    position: absolute;
-    margin-top: 125px;
-    right: 535px;
-    background-color: #25789e;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.fa-trash {
+    cursor: pointer;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-.total-container h3 {
-    margin: 0;
+.fa-trash:hover {
+    color: darkred;
+}
+
+.CONTENEDOR {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+
+}
+
+.position-total h3 {
+
     color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(41, 182, 207);
+    width: max-content;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    margin-right: 5%;
+    text-align: end;
+}
+
+.position-total{
+    text-align: end;
+    width: fit-content;
+    margin-left: 75%;
 }
