@@ -308,15 +308,28 @@ def ver_carrito():
 def eliminar_del_carro():
     idcan = request.form.get('idcan')
 
-    # Obtener el carrito de la sesión
-    carro = session.get('cart', [])
-    carro = [item for item in carro if item['id'] != idcan]
-    
-    # Guardar el carrito actualizado en la sesión
-    session['cart'] = carro
-    session.modified = True
+#obtener el carrito en la sesion
+    if idcan:
+        carro = session.get('cart', [])
 
-    return jsonify({'message': 'Canción eliminada del carro.'})
+        for item in carro:
+            if item['id'] == idcan:
+                carro.remove(item)
+                break
+
+#guardar el carrito actualizando la session 
+        session['cart'] = carro
+        session.modified = True
+        return jsonify({'message': 'cancion eliminada del carro.'})
+    
+#eliminar todas del carrito
+    else:
+        session['cart'] = []
+        session.modified = True
+
+    return jsonify({'message': 'Canciónes eliminadas del carro.'})
+
+
                     
 if __name__ == '__main__':
     app.add_url_rule('/', view_func=lista)

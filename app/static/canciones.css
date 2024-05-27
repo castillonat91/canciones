@@ -9,7 +9,7 @@ a{
     font-size: 20px;
 }
 .nav_canciones{
-    background-color: #0b6d74;
+    background-color: #218d88;
     color: #000;
     height: 60px;
 }
@@ -23,7 +23,7 @@ a{
     margin: 20px;
 }
 .canciones_nav li a:hover{
-    border-bottom: 2px solid rgb(3, 181, 212);
+    border-bottom: 2px solid rgb(41, 182, 207);
 }
 .regis {
     background-image: url(https://png.pngtree.com/background/20230612/original/pngtree-music-notes-flowing-on-a-dark-background-picture-image_3176634.jpg);
@@ -84,13 +84,13 @@ input[type="file"] {
     cursor: pointer;
 }
 .form .button:hover{
-    background-color: #46b3fc;
+    background-color:rgb(41, 182, 207);
 }
 /*estilos de lista de canciones*/
 .container{
     padding: 50px;
     margin: 100px ;
-    background-color: rgb(78, 184, 211);
+    background-color: rgb(41, 182, 207);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
     color: #000;
 }
@@ -134,7 +134,11 @@ input[type="file"] {
     text-align: center;
     margin: 20px 0;
 }
-.position-agre{
-    background-color: #46b3fc;
-    border: 1px #fff;
+.position-agr{
+    background-color: rgb(30, 150, 172);
+    border: 1px solid #0c2b80;
+    padding: 10px;
+}
+.add-to-cart{
+    border: none;
 }

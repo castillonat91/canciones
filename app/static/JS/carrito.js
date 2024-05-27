@@ -7,6 +7,13 @@ $(document).ready(function() {
             location.reload(); // Recargar la página para actualizar el carrito visualmente
         });
     });
+    $('.Eliminar').on('click', function() {
+        const itemId = $(this).data('id');
+        $.post('/eliminar-del-carro', function(data) {
+            alert(data.message || "Canciónes eliminadas del carro.");
+            location.reload(); // Recargar la página para actualizar el carrito visualmente
+        });
+    });
 
     $('.add-to-cart').on('click', function() {
         const idcan = $(this).data('id');
