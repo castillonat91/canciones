@@ -26,7 +26,7 @@ a{
     border-bottom: 2px solid rgb(41, 182, 207);
 }
 .regis {
-    background-image: url(https://png.pngtree.com/background/20230612/original/pngtree-music-notes-flowing-on-a-dark-background-picture-image_3176634.jpg);
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-notas-musicales_863013-134004.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -41,7 +41,7 @@ a{
     font-size: 50px;
 }
 .form_registro{
-    background-color: rgb(183, 190, 252);
+    background-color: rgb(7, 150, 114);
     margin: 0 auto 50px auto;
     width: 45%;
     padding: 50px;
@@ -77,7 +77,7 @@ input[type="file"] {
     width: 100%;
 }
 .form .button{
-    background-color: #290075;
+    background-color: #00756f;
     color: #000;
     padding: 8px;
     font-size: 16px;
